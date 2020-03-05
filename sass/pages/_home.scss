@@ -76,6 +76,7 @@
         color: #666;
         padding: 2.5rem 0;
         text-shadow: 2px 2px 5px rgba(102, 102, 102, 0.543);
+        line-height: 1.35;
     }
 }
 
@@ -97,7 +98,55 @@
         padding: 2rem 0;
         line-height: 1.8;
     }
+}
 
+// <----SERVICES---->
+
+.services{
+    padding: 2rem;
+
+    &__items{
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    &__item{
+        padding: 1rem 0;
+        text-align: center;
+    }
+}
+
+.item{
+
+    &__icon{
+        font-family: Flaticon;
+        color: #0028ff;
+        font-size: 3.75rem;
+
+        &--1:before{
+            content: "\f101";
+        }
+        &--2:before{
+            content: "\f100";
+        }
+        &--3:before{
+            content: "\f102";
+        }
+        &--4:before{
+            content: "\f103";
+        }
+    }
+
+    &__copy-h4{
+        text-transform: uppercase;
+        padding: 1rem 0;
+        font-size: 1.4rem;
+    }
+
+    &__copy-p{
+        color: #666;
+    }
 }
 
 

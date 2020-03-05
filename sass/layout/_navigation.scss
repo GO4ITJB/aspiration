@@ -8,7 +8,7 @@
     align-items: center;
     background-color: #000;
     height: 70px;
-    z-index: 1000;
+    z-index: 300000;
 
     &__logo{
         margin-left: 0px;
@@ -45,9 +45,9 @@
         width: 100%;
         position: fixed;
         left: 0;
-        top: -100%;
+        bottom: -100%;
         z-index: 1500;
-        // right: -100%;   Make it dissapear to the right, also change check value
+        //right: -100%;   //Make it dissapear to the right, also change check value
         opacity: 0;
         transition: all 1s;
     }
@@ -59,7 +59,7 @@
         align-items: center;
         flex-direction: column;
         list-style: none;
-        margin-top: 100px;
+        margin-top: 40vh;
         
     }
 
@@ -99,7 +99,7 @@
 
     &__toggler:checked ~ &__menu{
         opacity: 1;
-        top: 0;
+        bottom: 0;
     }
 
     // <---ICON--->
