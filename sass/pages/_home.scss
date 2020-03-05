@@ -46,19 +46,27 @@
     
 }
 
-// <----INTRO---->
-
+// <----ABOUT---->
 .about{
+
+    &__items{
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); //240px standard
+    }
+
+    &__item{
+            padding: 2rem .5rem;
+            height: 45vh;
+    }
 }
+
 
 .charity{
     background: url(../../img/about.jpg) no-repeat;
     background-size: cover;
     background-position-x: -7rem;
-    padding: 2rem .5rem 0;
-    height: 100%;
     
-
     &__h1{
         font-size: 2.5rem;
         text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.377);
@@ -66,7 +74,30 @@
 
     &__paragraph{
         color: #666;
-        padding: 2rem 0;
+        padding: 2.5rem 0;
         text-shadow: 2px 2px 5px rgba(102, 102, 102, 0.543);
     }
 }
+
+.donation{
+    background-color: #0028ff;
+
+    &__h2{
+        color: #fff;
+        font-size: 2rem;
+        font-weight: 600;
+
+        span{
+            color: rgba(255, 255, 255, 0.7);
+        }
+    }
+
+    &__paragraph{
+        color: #fff;
+        padding: 2rem 0;
+        line-height: 1.8;
+    }
+
+}
+
+
