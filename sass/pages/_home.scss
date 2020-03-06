@@ -63,7 +63,7 @@
 
 
 .charity{
-    background: url(../../img/about.jpg) no-repeat;
+    background: url(../img/about.jpg) no-repeat;
     background-size: cover;
     background-position-x: -7rem;
     
@@ -153,8 +153,11 @@
 
 .donation{
     background-color: #f8f9fa;
-    text-align: center;
     padding: 4rem 0;
+
+    &__content{
+        text-align: center;
+    }
 
     &__h2{
         color:#0028ff;
@@ -177,12 +180,95 @@
         color: #666;
     }
 
-    &__bar{
+    &__bar {
         width: 100%;
         height: 50px;
-        border-radius: 10px;
-        background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+        margin: 50px auto;
+        display: block;
+
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: none;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;  
     }
+
+    &__bar::-webkit-progress-bar {
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;  
+    }
+
+    &__bar::-webkit-progress-value {
+        border-radius: 5px;
+        background:
+            -webkit-linear-gradient(45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%),
+            -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
+            -webkit-linear-gradient(left, #0028ff, #0028ff);
+        
+        background-size: 25px 14px, 100% 100%, 100% 100%;
+        -webkit-animation: move 5s linear infinite;
+        animation: move 5s linear infinite;
+    }
+
+    &__bar::-moz-progress-bar  {
+        border-radius: 5px;
+        background:
+            -moz-linear-gradient(45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%),
+            -moz-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
+            -moz-linear-gradient(left, #0028ff, #0028ff);
+        
+        background-size: 25px 14px, 100% 100%, 100% 100%;
+        -moz-animation: move 5s linear infinite; 
+        animation: move 5s linear infinite;
+    }
+
+    @-webkit-keyframes move {
+        0% {background-position: 0px 0px, 0 0, 0 0}
+        100% {background-position: -100px 0px, 0 0, 0 0}
+    }
+
+    @-moz-keyframes move {
+        0% {background-position: 0px 0px, 0 0, 0 0}
+        100% {background-position: -100px 0px, 0 0, 0 0}
+    }
+
+    @keyframes move {
+        0% {background-position: 0px 0px, 0 0, 0 0}
+        100% {background-position: -100px 0px, 0 0, 0 0}
+    }
+
+    
 }
 
+    .donated{
+        display: flex;
+        align-items: center;
+        padding: 1rem 0;
 
+        &__h2{
+            color: #0028ff;
+            font-weight: 400;
+            font-size: 2.5rem;
+        }
+
+        &__money{
+            text-align: left;
+        }
+
+        &__p{
+            margin-left: 20px;
+            line-height: 1.5;
+
+            &--1{
+                margin-left: 10px;
+            }
+
+            &--2{
+                margin-left: 50px;
+            }
+            
+        }
+    }

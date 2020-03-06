@@ -59,7 +59,7 @@
         align-items: center;
         flex-direction: column;
         list-style: none;
-        margin-top: 80%;
+        margin-top: 30vh;
         
     }
 
@@ -75,15 +75,15 @@
             color: #fff;
             font-weight: 700;
             text-decoration: none;
-            // background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #000 50%);
+            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, pink 50%);
             background-size: 250%;  
-            // transition: all 2s;
+            transition: all 2s;
         }
 
         &:hover,
         &:active{
             background-position: 100%;
-            color: pink;
+            color: white;
             padding: 0 .5rem;
         }
         
