@@ -1,0 +1,61 @@
+.slider{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: #f8f9fa;
+    padding: 1rem 0;
+
+    &__animation{
+        position: relative;
+        width: 500%;
+        height: 100%;
+        animation: animate 10s ease infinite;
+    }
+
+    &__slide{
+        width: 20%;
+        height: 100%;
+        float: left;
+    }
+
+}
+
+@keyframes animate{
+
+    0%{
+        left: 0;
+    }
+
+    20%{
+        left: 0;
+    }
+
+    25%{
+        left: -100%;
+    }
+
+    45%{
+        left: -100%;
+    } 
+
+    50%{
+        left: -200%;
+    } 
+
+    70%{
+        left: -200%;
+    } 
+
+    75%{
+        left: -300%;
+    } 
+
+    95%{
+        left: -300%;
+    } 
+
+    100%{
+        left: -400%;
+    } 
+}

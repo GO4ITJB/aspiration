@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5, h6{
     background: url(../img/about.jpg) no-repeat;
     background-size: cover;
     background-position-x: -7rem;
-    
+
     &__h1{
         font-size: 2.5rem;
         text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.377);
@@ -87,6 +87,7 @@ h1, h2, h3, h4, h5, h6{
 
 .charity-2{
     background-color: #0028ff;
+    height: auto;
 
     &__h2{
         color: #fff;
@@ -490,29 +491,6 @@ h1, h2, h3, h4, h5, h6{
         line-height: 1.2;
         font-size: 1.75rem;
     }
-}
-
-.slider{
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    background-color: #f8f9fa;
-    padding: 1rem 0;
-
-    &__animation{
-        position: relative;
-        width: 500%;
-        height: 100%;
-        animation: animate 10s linear infinite;
-    }
-
-    &__slide{
-        width: 20%;
-        height: 100%;
-        float: left;
-    }
-
 } 
 
 .slide{
@@ -541,7 +519,7 @@ h1, h2, h3, h4, h5, h6{
     &__author-name{
         color: #212020;
         font-family: "Work Sans", Arial, sans-serif;
-        font-weight: 600;
+        font-weight: 500;
         font-size: 1.25rem;
         margin-bottom: 5px;
     }
@@ -549,65 +527,125 @@ h1, h2, h3, h4, h5, h6{
     &__author-work{
         color: #0028ff;
         text-transform: uppercase;
+        font-weight: 600;
     }
 }
 
+// <----FOOTER---->
 
+.footer{
+    position: relative;
+    background: url(../img/footer.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    padding: 7rem 0;
 
-
-
-.slide-content{
-
-    img{
-        width: 100px;
-        border-radius: 50%;
-    }
-
-    h3{
-        color: green;
-    }
-
-    h5{
-        color: yellow
-    }
-}
-
-@keyframes animate{
-
-    0%{
+    &__overlay{
+        position: absolute;
+        top: 0;
+        bottom: 0;
         left: 0;
+        right: 0;
+        content: "";
+        background: #0028ff;
+        opacity: .8;
     }
 
-    20%{
-        left: 0;
+    &__items{
+        position: relative;
     }
 
-    25%{
-        left: -100%;
+    &__item-heading{
+        padding: 2rem 0;
+        font-family: "Work Sans", Arial, sans-serif;
+        font-size: 1.5rem;
+        font-weight: 700;
     }
 
-    45%{
-        left: -100%;
-    } 
+    &__item{
+        position: relative;
+        color: #fff;
+    }
 
-    50%{
-        left: -200%;
-    } 
+    &__list-item{
+        padding: 1rem 0;
+        position: relative;
 
-    70%{
-        left: -200%;
-    } 
+        &--social{
+            color: pink;
+            display: inline-block;
+            height: 50px;
+            width: 50px;
+            background-color:rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            margin: 2rem 1rem 1rem 0;
+            padding: 0;
+            position: relative;
+        }
 
-    75%{
-        left: -300%;
-    } 
+        &--faq{
+            display: flex;
+            align-items: flex-start;
+        }
+    }
 
-    95%{
-        left: -300%;
-    } 
+    &__list-links{
+        color: rgb(218, 218, 218);
+    }
+    
 
-    100%{
-        left: -400%;
-    } 
+    &__list-icon{
+        color: #fff;
+        font-size: 1.2rem;
+        
+        
+        &--social{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); 
+            font-size: 1.5rem;
+        }
+
+        &--twitter:before{
+            content: "\f099";
+            font-family: 'icomoon';
+        }
+
+        &--fb:before{
+            content: "\f09a";
+            font-family: 'icomoon';
+        }
+
+        &--insta:before{
+            content: "\f16d";
+            font-family: 'icomoon';
+        }
+
+        &--location:before{
+            content: "\f041";
+            font-family: 'icomoon';
+            margin-right: 28px;
+        }
+
+        &--phone:before{
+            content: "\f16d";
+            font-family: 'icomoon';
+            margin-right: 22px;
+        }
+
+        &--email:before{
+            content: "\f0e0";
+            font-family: 'icomoon';
+            margin-right: 16px;
+        }
+    }
+
+    &__copyright{
+        color: rgb(218, 218, 218);
+        text-align: center;
+        margin-top: 3rem;
+    }
+
 }
-
