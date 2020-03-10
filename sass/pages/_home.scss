@@ -3,6 +3,8 @@
     margin: 0 auto;
 }
 
+
+
 h1, h2, h3, h4, h5, h6{
     font-family: "Oswald", Arial, sans-serif;
 }
@@ -54,23 +56,21 @@ h1, h2, h3, h4, h5, h6{
 // <----ABOUT---->
 .about{
 
-    &__items{
-        display: grid;
-        align-items: center;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); //240px standard
+    &__item-content-1{
+        margin: 2rem 1rem;
     }
 
-    &__item{
-            padding: 2rem .5rem;
-            height: 45vh;
+    &__item-content-2{
+        margin: 2rem 1rem;
     }
+
 }
 
 
 .charity{
     background: url(../img/about.jpg) no-repeat;
     background-size: cover;
-    background-position-x: -7rem;
+    background-position: top center;
 
     &__h1{
         font-size: 2.5rem;
@@ -87,7 +87,6 @@ h1, h2, h3, h4, h5, h6{
 
 .charity-2{
     background-color: #0028ff;
-    height: auto;
 
     &__h2{
         color: #fff;
@@ -109,8 +108,6 @@ h1, h2, h3, h4, h5, h6{
 // <----SERVICES---->
 
 .services{
-    padding: 2rem;
-
     &__items{
         display: grid;
         align-items: center;
@@ -118,7 +115,7 @@ h1, h2, h3, h4, h5, h6{
     }
 
     &__item{
-        padding: 1rem 0;
+        padding: 3rem 0;
         text-align: center;
     }
 }
@@ -276,10 +273,17 @@ h1, h2, h3, h4, h5, h6{
         padding: 2rem 0 3rem;
         line-height: 1.8;
     }
+
+    &__items{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-gap: 40px;
+    }
     
 }
 
 .item{
+
     &__h4{
         font-family: "Work Sans", Arial, sans-serif;
         font-weight: 500;
@@ -648,4 +652,35 @@ h1, h2, h3, h4, h5, h6{
         margin-top: 3rem;
     }
 
+}
+
+@media (min-width: 992px){
+    .container{
+        width: 60%;
+
+        &--about{
+            width: 100%;
+        }
+    }
+
+    .about{
+
+        &__item-content-1{
+            margin: 2rem 1rem;
+            width: 50%;
+            float: right;
+        }
+    
+        &__item-content-2{
+            padding: 2rem 1rem;
+        }
+    }
+
+
+    .item{
+        &--4{
+            grid-column: 1 / 4;
+            display: flex;
+        }
+    }
 }
