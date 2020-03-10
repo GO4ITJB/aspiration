@@ -108,11 +108,6 @@ h1, h2, h3, h4, h5, h6{
 // <----SERVICES---->
 
 .services{
-    &__items{
-        display: grid;
-        align-items: center;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    }
 
     &__item{
         padding: 3rem 0;
@@ -274,12 +269,6 @@ h1, h2, h3, h4, h5, h6{
         line-height: 1.8;
     }
 
-    &__items{
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        grid-gap: 40px;
-    }
-    
 }
 
 .item{
@@ -339,15 +328,7 @@ h1, h2, h3, h4, h5, h6{
     height: 90vh;
     display: block;
     background-size: cover;
-    background-position: top center;
-
-    &__items{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        justify-content: center;
-        height: 90vh;
-    }
+    background-position: center center;
 
 
     &__item{
@@ -391,11 +372,11 @@ h1, h2, h3, h4, h5, h6{
         padding: 1.5rem 0;
     }
 
-
     &__post{
         background-color: #f8f9fa ;
         margin: 1rem 0;
         padding: 1rem 1rem .5rem 1rem;
+        
         
 
         &--1{
@@ -650,6 +631,7 @@ h1, h2, h3, h4, h5, h6{
         color: rgb(218, 218, 218);
         text-align: center;
         margin-top: 3rem;
+        position: relative;
     }
 
 }
@@ -678,9 +660,94 @@ h1, h2, h3, h4, h5, h6{
 
 
     .item{
-        &--4{
-            grid-column: 1 / 4;
-            display: flex;
+
+        &__row{
+            position: relative;
+
+            &--2{
+                width: 60%;
+
+                &:before{
+                    content: "";
+                    border: 1px solid rgba(102, 102, 102, 0.1);
+                    position: absolute;
+                    top: 25px;
+                    left: -50px;
+                    height: 75%;
+                }
+            }
         }
+    }
+
+    .counter{
+        height: 35vh;
+    
+        &__items{
+            height: 35vh;
+        }
+    }
+
+    .blog{
+        &__post{
+            margin: .5rem 0;
+            padding: 0 1rem;
+        }
+
+        &__post-copy{
+    
+            &--1{
+                padding: 1rem;
+                width: auto;
+            }
+        }
+
+        &__post-link{
+
+            &--2{
+                height: 120px;
+                width: 160px;
+            }
+    
+            &--3{
+                height: 120px;
+                width: 160px;
+            }
+    
+            &--4{
+                height: 120px;
+                width: 160px;
+            }
+    
+        }
+
+        &__bottom{
+            padding: 0 2rem;
+        }
+    }
+
+    .stories{
+        padding: unset;
+
+        &__item{
+
+            &--1{
+                background-image: url(../img/testimony-img.jpg);
+                display: block;
+                width: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: top center;
+            }
+
+            &--2{
+                padding: 6rem 2rem;
+                display: flex;
+                flex-direction: column;
+                }
+        }
+        
+        
+
+        
     }
 }
