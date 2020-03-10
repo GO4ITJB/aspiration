@@ -8,10 +8,33 @@
 
     &--black{
         background-color: #000;
+
+        &:hover{
+            opacity: .7;
+        }
+    }
+
+    &--blue{
+        
+        &:hover{
+            opacity: .7;
+        }
     }
 
 }
 
-.btn:hover{
-    border: 3px solid #24ff19;
+@media (min-width: 1440px){
+
+    .btn{
+
+        &--margin-blu{
+            margin-top: 10px;
+        }
+        
+        &--margin-blk{
+            margin-top: inherit;
+        }
+    }
+
 }
+

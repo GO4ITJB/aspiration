@@ -56,53 +56,62 @@ h1, h2, h3, h4, h5, h6{
 // <----ABOUT---->
 .about{
 
-    &__item-content-1{
-        margin: 2rem 1rem;
+    &__item{
+        height: 100%;
+
+        &--1{
+            background: url(../img/about.jpg) no-repeat;
+            background-size: cover;
+            background-position: top center;
+            
+        }
+
+        &--2{
+            background-color: #0028ff;
+
+            span{
+                color: rgba(255, 255, 255, 0.7);
+            }
+        }
+
     }
 
-    &__item-content-2{
-        margin: 2rem 1rem;
+    &__item-content{
+        padding: 2rem 1rem;
     }
 
-}
+    &__item-heading{
 
+        &--1{
+            text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.377);
+            font-size: 2.5rem;
+            margin-top: 16px;
+        }
 
-.charity{
-    background: url(../img/about.jpg) no-repeat;
-    background-size: cover;
-    background-position: top center;
-
-    &__h1{
-        font-size: 2.5rem;
-        text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.377);
-    }
-
-    &__paragraph{
-        color: #666;
-        padding: 2.5rem 0;
-        text-shadow: 2px 2px 5px rgba(102, 102, 102, 0.543);
-        line-height: 1.35;
-    }
-}
-
-.charity-2{
-    background-color: #0028ff;
-
-    &__h2{
-        color: #fff;
-        font-size: 2rem;
-        font-weight: 600;
-
-        span{
-            color: rgba(255, 255, 255, 0.7);
+        &--2{
+            color: #fff;
+            font-size: 2rem;
+            font-weight: 600;
         }
     }
 
-    &__paragraph{
-        color: #fff;
-        padding: 2rem 0;
-        line-height: 1.8;
+    &__item-text{
+        padding: 1rem 0;
+
+        &--1{
+            text-shadow: 2px 2px 5px rgba(102, 102, 102, 0.543);
+            color: #666;
+            line-height: 1.35;
+            margin-top: 24px;
+        }
+
+        &--2{
+            color: #fff;
+            padding: 1rem 0;
+            line-height: 1.8;
+        }
     }
+
 }
 
 // <----SERVICES---->
@@ -419,7 +428,7 @@ h1, h2, h3, h4, h5, h6{
 
     &__post-copy{
         margin-left: 10px;
-        width: 100%;
+        width: auto;
         line-height: 1.5;
 
         &--1{
@@ -636,9 +645,9 @@ h1, h2, h3, h4, h5, h6{
 
 }
 
-@media (min-width: 992px){
+@media (min-width: 1440px){
     .container{
-        width: 60%;
+        width: 75%;
 
         &--about{
             width: 100%;
@@ -647,15 +656,15 @@ h1, h2, h3, h4, h5, h6{
 
     .about{
 
-        &__item-content-1{
+        &__item-content{
             margin: 2rem 1rem;
-            width: 50%;
-            float: right;
+
+            &--1{
+                width: 50%;
+                float: right;
+            }
         }
-    
-        &__item-content-2{
-            padding: 2rem 1rem;
-        }
+
     }
 
 
@@ -749,5 +758,30 @@ h1, h2, h3, h4, h5, h6{
         
 
         
+    }
+}
+
+@media (min-width: 760px){
+    .container{
+
+        &--about{
+            width: 100%;
+        }
+
+        &--priorities{
+            width: 65%;
+        }
+
+        &--counter{
+            width: 50%;
+        }
+
+        &--blog{
+            width: 98%;
+        }
+    }
+
+    .stories__item--1{
+        display: none;
     }
 }

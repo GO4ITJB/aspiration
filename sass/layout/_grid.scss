@@ -43,7 +43,9 @@
     }
 }
 
-.stories{
+.stories, 
+.footer
+{
 
     &__items{
         display: grid;
@@ -51,26 +53,10 @@
     }
 }
 
-.footer{
-
-    &__items{
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    }
-}
 
 
 
-@media (min-width: 992px){
-    
-    .item{
-        &--4{
-            grid-column: 1 / 4;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-    }
+@media (min-width: 760px){
 
     .blog{
 
@@ -92,6 +78,27 @@
             &--4{
                 grid-column: 2 ;
             }
+        }
+    }
+
+    .footer{
+
+        &__items{
+            grid-gap: 10px 50px;
+        }
+    }
+
+}
+
+
+@media (min-width: 992px){
+    
+    .item{
+        &--4{
+            grid-column: 1 / 4;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
     }
 
